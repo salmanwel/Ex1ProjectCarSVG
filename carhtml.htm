@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body{
+
+background-color:#ffffff;
+
+
+}
+
+
+</style>
+
+<script type="text/javascript">
+function loadfunction()
+{
+  document.getElementById("displaytest").style.display="none";
+}
+</script>
+
+<head>
+<svg width="1050" height="600" viewBox="0 0 740 450">
+  
+ <path id="motionPath" fill="none" stroke="#000000" stroke-miterlimit="10" d="M100 200 H 400 "/>
+  
+<g id="car" transform="translate(-225, -199)">
+     //Tyre L
+   <circle fill="none" stroke="#b30000" cx="227" cy="189.2" r="6"/>
+   <circle fill="none" stroke="#b30000" cx="227" cy="189.2" r="10"/>
+
+    //Tyre R
+    <circle fill="none" stroke="#004d00" cx="267" cy="189.2" r="6"/>
+    <circle fill="none" stroke="#004d00" cx="267" cy="189.2" r="10"/>
+
+
+    //Body
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M237 160 h 20 "/>
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M257 160  L 267 174 "/>
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M237 160  L 227 174 "/>
+    
+</g>
+
+<rect x="350" y="160" rx="10" ry="50" width="160" height="70"/>
+
+<g id="car2" transform="translate(-225, -199)">
+     //Tyre L
+   <circle fill="none" stroke="#4d0039" cx="227" cy="189.2" r="6"/>
+   <circle fill="none" stroke="#4d0039" cx="227" cy="189.2" r="10"/>
+
+    //Tyre R
+    <circle fill="none" stroke="#ff0000" cx="267" cy="189.2" r="6"/>
+    <circle fill="none" stroke="#ff0000" cx="267" cy="189.2" r="10"/>
+
+
+    //Body
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M237 160 h 20 "/>
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M257 160  L 267 174 "/>
+    <path fill="none" stroke="#004d00" stroke-miterlimit="5" d="M237 160  L 227 174 "/>
+    
+
+</g>
+
+
+
+
+  <animateMotion 
+         attributeName="startOffset"
+
+           xlink:href="#car"
+
+           begin="0s" dur="5s" 
+           from="0%" to ="100%"
+           keyTimes="0;1" 
+           calcMode="spline" 
+           keySplines="0.1 0.2 .22 1"
+           
+
+             >
+
+             <mpath xlink:href="#motionPath" />
+    
+  </animateMotion>
+
+   <path id="motionPath2" fill="none" stroke="#000000" stroke-miterlimit="10" d="M500 200 H 800 "/>
+
+    <animateMotion 
+         attributeName="startOffset"
+
+           xlink:href="#car2"
+
+           begin="5s" dur="5s" 
+           from="0%" to ="100%"
+           keyTimes="0;1" 
+           calcMode="spline" 
+           keySplines="0.1 0.2 .22 1"
+           
+
+             >
+
+             <mpath xlink:href="#motionPath2" />
+    
+  </animateMotion>
+  
+</svg>
+</head>
+<body>
+  <div id="displaytest">
+ <p>This is a sample Text</p>
+</div>
+ <form>
+  <button type="button" onclick="loadfunction()"> Press here to load Text </button>
+ </form>
+</body>
+</html>
